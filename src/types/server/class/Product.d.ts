@@ -1,0 +1,36 @@
+import { OrderProduct } from "./OrderProduct";
+export type SearchType = "name" | "collection" | "category" | "popular";
+export declare class Product {
+    id: number;
+    name: string;
+    cover: string;
+    images?: string;
+    date?: Date;
+    description?: string;
+    resume?: string;
+    featured?: Boolean;
+    price: number;
+    stock?: number;
+    category?: number;
+    tags?: string;
+    weight?: number;
+    width?: number;
+    height?: number;
+    lenght?: number;
+    sold: number;
+    ageRating: string;
+    brand: string;
+    rating: number;
+    ratingQtd: number;
+    originalPrice: number;
+    promotionalPrice: number;
+    discountPercentage: number;
+    code: string;
+    dropshipping: number;
+    constructor(igest_product: IgestProduct);
+    static getById(id: number, franchise_id: number): Promise<Product>;
+    static getImages(id: number, mainOnly?: boolean): Promise<string>;
+    static search(typed: string, list: Product[]): Product[];
+    getImage(mainOnly?: boolean): Promise<string>;
+    getReviews(): Promise<OrderProduct[]>;
+}

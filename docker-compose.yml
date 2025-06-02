@@ -1,0 +1,17 @@
+services:
+  app:
+    image: agenciaboz/casaludica.mkt.shopkeeper:latest
+    container_name: casaludica.mkt.shopkeeper
+    ports:
+      - "8082:8082"
+    networks:
+      - webnet
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '0.25'
+          memory: 256M
+
+networks:
+  webnet:

@@ -1,0 +1,14 @@
+@use '/src/sass/colors';
+
+button {
+    display: flex;
+    border-radius: 20vw;
+    border: none;
+    background-color: colors.$green;
+    color: white;
+    padding: 5vw;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 5vw;
+}
