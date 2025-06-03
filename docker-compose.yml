@@ -3,7 +3,7 @@ services:
     image: agenciaboz/casaludica.mkt.shopkeeper:latest
     container_name: casaludica.mkt.shopkeeper
     ports:
-      - "8082:8082"
+      - "8090:8090"
     networks:
       - webnet
     restart: unless-stopped

@@ -11,5 +11,5 @@ FROM node:22 as production
 WORKDIR /app
 RUN yarn global add serve
 COPY --from=build /app/dist /app
-EXPOSE 8082
-CMD ["serve", "-s", ".", "-l", "8082"]
+EXPOSE 8090
+CMD ["serve", "-s", ".", "-l", "8090"]
