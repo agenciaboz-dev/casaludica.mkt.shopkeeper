@@ -20,6 +20,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins;
+  font-size: 16px;
 }
 
 h1, h2, h3 {
@@ -82,7 +83,7 @@ img {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #363775;
+  background: #22276A;
   border-radius: 10px;
 }
 

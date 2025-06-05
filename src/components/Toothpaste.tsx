@@ -11,13 +11,13 @@ export const Toothpaste: React.FC<ToothpasteProps> = (props) => {
 
     useEffect(() => {
         setTimeout(() => {
-            setValues([9, 10, 10, 8, 5, 5, 7, 8, 7])
+            setValues(isMobile ? [5, 4.5, 3, 2.5] : [10.5, 11, 11, 8.5, 6, 7, 9, 10, 9.5])
         }, 500)
-    }, [])
+    }, [isMobile])
 
     return (
         <Box sx={{ position: "absolute", bottom: 0, left: 0, width: "100vw" }}>
-            <ResponsiveContainer style={{ flex: 1, paddingRight: isMobile ? 20 : undefined }} height={350}>
+            <ResponsiveContainer style={{ flex: 1 }} height={350}>
                 <AreaChart
                     data={values.map((item) => ({ x: item }))}
                     margin={{

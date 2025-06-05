@@ -1,11 +1,12 @@
 import React from "react"
-import { Box } from "@mui/material"
+import { Box, useMediaQuery } from "@mui/material"
 import { Toothpaste } from "../components/Toothpaste"
 import { Login } from "../components/Login"
 
 interface HomeProps {}
 
 export const Home: React.FC<HomeProps> = (props) => {
+    const isMobile = useMediaQuery("(orientation: portrait)")
     return (
         <Box sx={{ height: "100vh", position: "relative", overflow: "hidden" }}>
             <video
