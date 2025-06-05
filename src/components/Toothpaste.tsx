@@ -11,7 +11,7 @@ export const Toothpaste: React.FC<ToothpasteProps> = (props) => {
 
     useEffect(() => {
         setTimeout(() => {
-            setValues(isMobile ? [5, 4.5, 3, 2.5] : [10.5, 11, 11, 8.5, 6, 7, 9, 10, 9.5])
+            setValues(isMobile ? [5, 4.5, 3, 2.5] : [9, 10, 10, 8, 5, 5, 7, 8, 7])
         }, 500)
     }, [isMobile])
 
