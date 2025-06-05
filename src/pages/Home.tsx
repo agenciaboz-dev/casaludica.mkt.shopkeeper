@@ -7,10 +7,17 @@ interface HomeProps {}
 
 export const Home: React.FC<HomeProps> = (props) => {
     return (
-        <Box sx={{ height: "100vh", position: "relative" }}>
-            <video src="/background.mp4" style={{ width: "100vw", height: "100vh", objectFit: "fill" }} autoPlay muted loop disablePictureInPicture />
+        <Box sx={{ height: "100vh", position: "relative", overflow: "hidden" }}>
+            <video
+                src="/background.mp4"
+                style={{ width: "100vw", height: "110vh", objectFit: "cover", objectPosition: "center" }}
+                autoPlay
+                muted
+                loop
+                disablePictureInPicture
+            />
             <Box sx={{ bgcolor: "#22276A80", width: "100vw", height: "100vh", position: "absolute" }} />
-            <Toothpaste />
+            {/* <Toothpaste /> */}
             <Login />
         </Box>
     )
